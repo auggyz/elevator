@@ -49,6 +49,7 @@
                 <li data-7seg-74="30" class="d3 seg0"><li data-7seg-74="31" class="d3 seg1"><li data-7seg-74="32" class="d3 seg2"><li data-7seg-74="33" class="d3 seg3"><li data-7seg-74="34" class="d3 seg4"><li data-7seg-74="35" class="d3 seg5"><li data-7seg-74="36" class="d3 seg6"><li data-7seg-74="37" class="d3 seg7">
                 <li data-7seg-74="40" class="d4 seg0"><li data-7seg-74="41" class="d4 seg1"><li data-7seg-74="42" class="d4 seg2"><li data-7seg-74="43" class="d4 seg3"><li data-7seg-74="44" class="d4 seg4"><li data-7seg-74="45" class="d4 seg5"><li data-7seg-74="46" class="d4 seg6"><li data-7seg-74="47" class="d4 seg7">
             </ul></div>
+            <div class="cabin"></div>
             <div class="door left"></div>
             <div class="door right"></div>
             <div class="wall">
@@ -68,6 +69,7 @@
                 <li data-7seg-73="30" class="d3 seg0"><li data-7seg-73="31" class="d3 seg1"><li data-7seg-73="32" class="d3 seg2"><li data-7seg-73="33" class="d3 seg3"><li data-7seg-73="34" class="d3 seg4"><li data-7seg-73="35" class="d3 seg5"><li data-7seg-73="36" class="d3 seg6"><li data-7seg-73="37" class="d3 seg7">
                 <li data-7seg-73="40" class="d4 seg0"><li data-7seg-73="41" class="d4 seg1"><li data-7seg-73="42" class="d4 seg2"><li data-7seg-73="43" class="d4 seg3"><li data-7seg-73="44" class="d4 seg4"><li data-7seg-73="45" class="d4 seg5"><li data-7seg-73="46" class="d4 seg6"><li data-7seg-73="47" class="d4 seg7">
             </ul></div>
+            <div class="cabin"></div>
             <div class="door left"></div>
             <div class="door right"></div>
             <div class="wall">
@@ -87,6 +89,7 @@
                 <li data-7seg-72="30" class="d3 seg0"><li data-7seg-72="31" class="d3 seg1"><li data-7seg-72="32" class="d3 seg2"><li data-7seg-72="33" class="d3 seg3"><li data-7seg-72="34" class="d3 seg4"><li data-7seg-72="35" class="d3 seg5"><li data-7seg-72="36" class="d3 seg6"><li data-7seg-72="37" class="d3 seg7">
                 <li data-7seg-72="40" class="d4 seg0"><li data-7seg-72="41" class="d4 seg1"><li data-7seg-72="42" class="d4 seg2"><li data-7seg-72="43" class="d4 seg3"><li data-7seg-72="44" class="d4 seg4"><li data-7seg-72="45" class="d4 seg5"><li data-7seg-72="46" class="d4 seg6"><li data-7seg-72="47" class="d4 seg7">
             </ul></div>
+            <div class="cabin"></div>
             <div class="door left"></div>
             <div class="door right"></div>
             <div class="wall">
@@ -106,6 +109,7 @@
                 <li data-7seg-71="30" class="d3 seg0"><li data-7seg-71="31" class="d3 seg1"><li data-7seg-71="32" class="d3 seg2"><li data-7seg-71="33" class="d3 seg3"><li data-7seg-71="34" class="d3 seg4"><li data-7seg-71="35" class="d3 seg5"><li data-7seg-71="36" class="d3 seg6"><li data-7seg-71="37" class="d3 seg7">
                 <li data-7seg-71="40" class="d4 seg0"><li data-7seg-71="41" class="d4 seg1"><li data-7seg-71="42" class="d4 seg2"><li data-7seg-71="43" class="d4 seg3"><li data-7seg-71="44" class="d4 seg4"><li data-7seg-71="45" class="d4 seg5"><li data-7seg-71="46" class="d4 seg6"><li data-7seg-71="47" class="d4 seg7">
             </ul></div>
+            <div class="cabin"></div>
             <div class="door left"></div>
             <div class="door right"></div>
             <div class="wall">
@@ -125,6 +129,7 @@
                 <li data-7seg-70="30" class="d3 seg0"><li data-7seg-70="31" class="d3 seg1"><li data-7seg-70="32" class="d3 seg2"><li data-7seg-70="33" class="d3 seg3"><li data-7seg-70="34" class="d3 seg4"><li data-7seg-70="35" class="d3 seg5"><li data-7seg-70="36" class="d3 seg6"><li data-7seg-70="37" class="d3 seg7">
                 <li data-7seg-70="40" class="d4 seg0"><li data-7seg-70="41" class="d4 seg1"><li data-7seg-70="42" class="d4 seg2"><li data-7seg-70="43" class="d4 seg3"><li data-7seg-70="44" class="d4 seg4"><li data-7seg-70="45" class="d4 seg5"><li data-7seg-70="46" class="d4 seg6"><li data-7seg-70="47" class="d4 seg7">
             </ul></div>
+            <div class="cabin"></div>
             <div class="door left"></div>
             <div class="door right"></div>
             <div class="wall">
@@ -186,14 +191,13 @@
 
         await window.wasmLoaded
 
-        // Building déclaré EN PREMIER pour que L293DMotors puisse l'utiliser
         const building = new Building({
             floors : ['#floor0', '#floor1', '#floor2', '#floor3', '#floor4', '#floor5'],
             doors  : ['.left', '.right'],
             cabin  : '#cabin',
             analog : { pressure: '#pressure', presence: '#presence' },
             buttons: {
-                                     cabin0: '#panel-1', floor0up: '#floor0 .up',
+                                         cabin0: '#panel-1', floor0up: '#floor0 .up',
                 floor1down: '#floor1 .down', cabin1: '#panel0', floor1up: '#floor1 .up',
                 floor2down: '#floor2 .down', cabin2: '#panel1', floor2up: '#floor2 .up',
                 floor3down: '#floor3 .down', cabin3: '#panel2', floor3up: '#floor3 .up',
